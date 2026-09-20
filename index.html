@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duy Tan University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. THANH TOP BAR (Màu đỏ đô) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <div class="flags">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg" alt="Việt Nam" class="flag-icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg" alt="UK" class="flag-icon">
+                </div>
+                <a href="tel:+84236365403" class="top-link"><i class="fas fa-phone-alt"></i> (+84) 236.365403</a>
+                <a href="#" class="top-link"><i class="fas fa-envelope"></i> Liên hệ</a>
+            </div>
+
+            <div class="top-bar-right">
+                <a href="#" class="btn-top btn-euni"><i class="fas fa-graduation-cap"></i> eUniversity</a>
+                <a href="#" class="btn-top btn-mydtu"><i class="fas fa-book"></i> My DTU</a>
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" placeholder="Tìm kiếm...">
+                    <button class="search-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. THANH MENU CHÍNH (Màu đỏ tươi) -->
+    <nav class="main-nav">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#">
+                    <div class="logo-icon" style="border: none;">
+                        <!-- Nếu ảnh logo-dtu.png của bạn có nền đỏ, nó sẽ bị lỗi trắng xóa khi dùng filter. 
+                             Tốt nhất bạn nên dùng icon hoặc ảnh PNG nền trong suốt -->
+                        <img src="./img/logo-dtu.png" alt="icon" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="logo-text">
+                        <span>ĐẠI HỌC</span>
+                        <span>DUY TÂN</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Danh sách Menu -->
+            <ul class="menu-list">
+                <li><a href="#"><i class="fas fa-home"></i></a></li>
+                <li><a href="#">GIỚI THIỆU</a></li>
+                <li><a href="#">TUYỂN SINH</a></li>
+                <li><a href="#">ĐÀO TẠO</a></li>
+                <li class="active"><a href="#">NGHIÊN CỨU</a></li>
+                <li><a href="#">HỢP TÁC</a></li>
+                <li><a href="#">DU HỌC</a></li>
+                <li><a href="#">HOẠT ĐỘNG</a></li>
+                <li><a href="#">TIN TỨC</a></li>
+                <li><a href="#">SDGs</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 3. THANH BREADCRUMB (Màu xám nhạt) -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="#">Trang chủ</a> <span>/</span> <a href="#">Nghiên cứu</a>
+        </div>
+    </div>
+
+    <!-- =========================================
+         4. PHẦN BODY (NỘI DUNG CHÍNH)
+         ========================================= -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Tiêu đề mục -->
+            <div class="section-title">
+                <h2>NGHIÊN CỨU</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <!-- 1. TIN NỔI BẬT (TRÊN CÙNG) -->
+            <article class="featured-post">
+                <div class="featured-img">
+                    <img src="./img/anh_1.png" alt="Tin nổi bật">
+                </div>
+                <div class="featured-text">
+                    <h3>Đại học Duy Tân ra mắt hai sản phẩm AI phục vụ giáo dục</h3>
+                    <p>Chiều ngày 12.9, Đại học Duy Tân ra mắt hai sản phẩm trí tuệ nhân tạo do đội ngũ nhà trường tự nghiên cứu và phát triển: Hệ thống trợ lý AI tương tác thông minh HeyDT và Nền tảng Khảo thí ...</p>
+                </div>
+            </article>
+
+            <!-- 2. LƯỚI TIN TỨC (3 CỘT) -->
+            <div class="news-grid">
+                <article class="news-card">
+                    <img src="./img/anh_2.png" alt="Tin 1">
+                    <h4>Người đông hành phía sau những sáng chế vì cộng đồng của ...</h4>
+                </article>
+                
+                <article class="news-card">
+                    <img src="./img/anh_3.png" alt="Tin 2">
+                    <h4>Giảng viên DTU với giải Best Paper về GenAI & Du lịch Xanh ...</h4>
+                </article>
+                
+                <article class="news-card">
+                    <img src="./img/anh_4.png" alt="Tin 3">
+                    <h4>ĐH Duy Tân thử nghiệm hệ thống AI đa tác tử hỗ trợ nghiên ...</h4>
+                </article>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

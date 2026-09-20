@@ -1,0 +1,363 @@
+/* =========================================
+   1. RESET CSS & CẤU HÌNH CHUNG
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+/* Class dùng để căn giữa nội dung, giới hạn chiều rộng trang web */
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   2. THANH TOP BAR (Màu đỏ đô)
+   ========================================= */
+.top-bar {
+    background-color: #9e1d22;
+    color: #ffffff;
+    height: 40px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar-left, .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.flags {
+    display: flex;
+    gap: 5px;
+}
+.flag-icon {
+    height: 15px;
+    border-radius: 2px;
+}
+
+.top-link {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-top {
+    background-color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+.btn-euni { color: #007bff; }
+.btn-mydtu { color: #d81e24; }
+
+.search-box {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 3px 10px;
+    display: flex;
+    align-items: center;
+}
+.search-icon {
+    color: #333;
+    margin-right: 5px;
+}
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    width: 150px;
+}
+.search-btn {
+    background: none;
+    border: none;
+    color: #d81e24;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* =========================================
+   3. THANH MENU CHÍNH (Màu đỏ tươi)
+   ========================================= */
+.main-nav {
+    background-color: #d81e24;
+    height: 60px;
+}
+
+/* Logo */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Phép thuật biến ảnh thành màu trắng */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.logo-text span:first-child {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.logo-text span:last-child {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Danh sách Menu */
+.menu-list {
+    list-style: none;
+    display: flex;
+    height: 60px;
+    margin-left: auto;
+}
+
+.menu-list li {
+    height: 100%;
+}
+
+.menu-list li a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 18px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.menu-list li a:hover {
+    background-color: #b01217; 
+}
+
+.menu-list li.active a {
+    background-color: #333333;
+}
+
+.menu-list li a .fa-home {
+    font-size: 16px;
+}
+
+/* =========================================
+   4. THANH BREADCRUMB (Màu xám nhạt)
+   ========================================= */
+.breadcrumb {
+    background-color: #ebebeb;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.breadcrumb .container {
+    justify-content: flex-start;
+    font-size: 13px;
+    color: #333;
+}
+.breadcrumb a {
+    color: #333;
+}
+.breadcrumb span {
+    margin: 0 5px;
+    color: #666;
+}
+
+/* =========================================
+   5. PHẦN BODY (NỘI DUNG CHÍNH)
+   ========================================= */
+.main-content {
+    padding: 40px 0;
+}
+
+/* --- QUAN TRỌNG: Ghi đè container cho Body --- */
+.main-content .container {
+    display: flex;
+    flex-direction: column; /* Bắt buộc xếp dọc */
+    align-items: stretch;   /* Kéo giãn nội dung */
+    gap: 40px;              /* Khoảng cách giữa các khối */
+}
+
+/* --- Tiêu đề mục (NGHIÊN CỨU) --- */
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Giảm margin vì đã có gap ở container */
+}
+
+.section-title h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.title-line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #cccccc;
+    margin-left: 20px;
+}
+
+/* --- 1. Tin nổi bật (Trên cùng) --- */
+.featured-post {
+    display: flex;
+    gap: 30px;
+}
+
+.featured-img {
+    width: 50%;
+}
+
+.featured-img img {
+    width: 100%;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-text {
+    width: 50%;
+    text-align: right;
+}
+
+.featured-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.featured-text p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+/* --- 2. Lưới tin tức (3 cột) --- */
+.news-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.news-card {
+    flex: 1;
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.news-card h4 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+    line-height: 1.4;
+}
+
+/* --- 3. Danh sách tin tức (Dưới cùng) --- */
+.news-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px dashed #cccccc;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item-img {
+    width: 35%;
+}
+
+.news-item-img img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.news-item-content {
+    width: 65%;
+}
+
+.news-item-content h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0b3b60;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.news-item-content .date {
+    font-size: 13px;
+    color: #888888;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.news-item-content p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.5;
+    margin: 0;
+}
